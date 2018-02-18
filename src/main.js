@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Counter from './Counter';
+import App from './Components/App';
 
 const Init = () => (
-  <h1>Hello World</h1>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 )
 
 

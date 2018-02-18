@@ -24,3 +24,10 @@ Compile
 ```
 npm run compile
 ```
+
+Auto-compile
+---
+Run this in a separate shell window
+```
+npm run watch
+```
