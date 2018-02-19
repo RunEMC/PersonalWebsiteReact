@@ -18,6 +18,10 @@ module.exports = {
           'babel-loader',
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: "url-loader",
+      },
     ],
   },
 };

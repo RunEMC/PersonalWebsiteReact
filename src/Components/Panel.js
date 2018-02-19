@@ -1,21 +1,17 @@
 import React from "react";
 
-const PanelInner = props => (
-  <div>
-    <h3>{props.title}</h3>
-  </div>
-);
+function Panel(props) {
 
-const Panel = props => (
-  <div>
-    <PanelInner title={props.title} />
-    {/*
+  return (
+    <div>
       <img
         name={"panel-bg"}
-        src={"https://i.ytimg.com/vi/XKJyRfbvDLg/hqdefault.jpg"}
+        src={""}
         alt={"test"}
-      />*/}
-  </div>
-);
+      />
+      <h3>{props.title}</h3>
+    </div>
+  );
+};
 
 export default Panel;

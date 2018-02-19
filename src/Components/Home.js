@@ -2,33 +2,41 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Panel from './Panel';
+import lootbox from '../Images/lootbox.png';
 
 const Home = () => (
   <div>
-    <h1>Hello world from home</h1>
-    <nav>
-      <Panel title="Ron Li" />
-      <Link to="/about">
-        <Panel title="About" />
-      </Link>
-      <Link to="/about">
-        <Panel title="Projects" />
-      </Link>
-      <Link to="/about">
-        <Panel title="Contact" />
-      </Link>
-      <Link to="/about">
-        <Panel title="Resume" />
-      </Link>
-    </nav>
-
+    <Panel title="Ron Li" imgsrc=""/>
     <Grid>
       <Row>
-        <Col xs={12} md={8}>
-          test1
+        <Col md={6}>
+          <Link to="/about">
+            <div>
+              <img
+                name={"panel-bg"}
+                src={lootbox}
+                alt={"test"}
+              />
+              <h3>About</h3>
+            </div>
+          </Link>
         </Col>
-        <Col xs={6} md={4}>
-          test2
+        <Col md={6}>
+          <Link to="/about">
+            <Panel title="Projects" imgsrc=""/>
+          </Link>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          <Link to="/about">
+            <Panel title="Contact" imgsrc=""/>
+          </Link>
+        </Col>
+        <Col md={6}>
+          <Link to="/about">
+            <Panel title="Resume" imgsrc=""/>
+          </Link>
         </Col>
       </Row>
     </Grid>
