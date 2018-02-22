@@ -25,6 +25,7 @@
     "react-router-dom": "^4.2.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
+    "webpack-css-loaders": "^1.0.0",
     "webpack-dev-middleware": "^2.0.5"
   }
 }
