@@ -1,8 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
+import Panel from './Panel'
 import lootbox from '../Images/lootbox.png';
 
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Panel imgSrc="./Images/lootbox.png"/>
+    )
+  }
+}
+
+/*
 const Home = () => (
   <div>
     <div>
@@ -49,5 +63,6 @@ const Home = () => (
     </Grid>
   </div>
 );
+*/
 
 export default Home;
