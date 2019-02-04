@@ -18,7 +18,7 @@ const styles = theme => ({
   main: {
     zIndex: -1,
     backgroundColor: '#F1F1F1',
-    margin: '20px 12% 20px 12%',
+    margin: '40px 12% 40px 12%',
     height: '100%',
     padding: '2% 10% 6% 10%',
     boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)'

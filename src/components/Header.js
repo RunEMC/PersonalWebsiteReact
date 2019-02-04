@@ -4,6 +4,8 @@ import { AppBar, Toolbar, ButtonBase, Typography, Fab, withStyles } from '@mater
 import logo from './icons/about.svg';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
+// https://coolors.co/f5f5f5-266dd3-85c7f2-636363-4c4c4c
+
 const styles = theme => ({
   appBar: {
     backgroundColor: '#266DD3'
@@ -12,9 +14,9 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     width: '100%',
-    height: 150,
-    paddingLeft: '10%',
-    paddingRight: '10%'
+    height: 200,
+    paddingLeft: '18%',
+    paddingRight: '18%'
   },
   navCard: {
     margin: 'auto'
@@ -31,8 +33,8 @@ const styles = theme => ({
     },
     '&:hover': {
       zIndex: 1,
-      height: 135,
-      width: 135
+      height: 145,
+      width: 145
     },
     borderRadius: '25px',
     backgroundColor: '#F5F5F5',
@@ -42,8 +44,8 @@ const styles = theme => ({
   },
   imageSrc: {
     height: 80,
-    marginLeft: '5px',
-    marginRight: '5px'
+    marginLeft: '10px',
+    marginRight: '10px'
   },
   text: {
     textDecoration: 'none',
