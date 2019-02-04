@@ -7,17 +7,22 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 const styles = theme => ({
-  main: {
-    padding: 3 * theme.spacing.unit,
-    [theme.breakpoints.down('xs')]: {
-      padding: 2 * theme.spacing.unit,
-    },
+  mainContainer: {
+    backgroundColor: '#eaf6f7',
+    minHeight: '100vh'
   },
+  main: {
+    zIndex: -1,
+    backgroundColor: 'white',
+    margin: '20px 12% 20px 12%',
+    height: '100%',
+    padding: '5%'
+  }
 });
 
 const App = ({ classes }) => (
   <Router>
-    <div>
+    <div className={classes.mainContainer}>
       <Fragment>
         <CssBaseline />
         <Header />
