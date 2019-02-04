@@ -5,6 +5,9 @@ import logo from './icons/about.svg';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const styles = theme => ({
+  appBar: {
+    backgroundColor: '#266DD3'
+  },
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -21,7 +24,7 @@ const styles = theme => ({
     flexWrap: 'wrap',
     position: 'relative',
     height: 125,
-    width: 100,
+    width: 125,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
       height: 125,
@@ -30,10 +33,15 @@ const styles = theme => ({
       zIndex: 1
     },
     borderRadius: '25px',
+    backgroundColor: '#F5F5F5',
     boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)'
   },
   imageSrc: {
-    height: 75,
+    height: 80,
+  },
+  text: {
+    textDecoration: 'none',
+    color: '#4C4C4C'
   }
 })
 
@@ -41,45 +49,45 @@ function AppHeader(props) {
   const { classes } = props;
 
   return (
-    <AppBar position="static" color='default'>
+    <AppBar position="static" color='primary' classes={{colorPrimary: classes.appBar}}>
         <div className={classes.root}>
           <div className={classes.navCard}>
-          <Link to="/about/">
-            <ButtonBase focusRipple className={classes.image}>
-              <img src={logo} alt="Logo" className={classes.imageSrc}/>
-              <Typography>About</Typography>
-            </ButtonBase>
-          </Link>
-          </div>
-          <div className={classes.navCard}>
-            <Link to="/home/">
+            <Link to="/home/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
                 <img src={logo} alt="Logo" className={classes.imageSrc}/>
-                <Typography>Home</Typography>
+                <Typography variant="h6">Home</Typography>
               </ButtonBase>
             </Link>
           </div>
           <div className={classes.navCard}>
-            <Link to="/home/">
+            <Link to="/about/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
                 <img src={logo} alt="Logo" className={classes.imageSrc}/>
-                <Typography>Home</Typography>
+                <Typography variant="h6">About</Typography>
               </ButtonBase>
             </Link>
           </div>
           <div className={classes.navCard}>
-            <Link to="/home/">
+            <Link to="/projects/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
                 <img src={logo} alt="Logo" className={classes.imageSrc}/>
-                <Typography>Home</Typography>
+                <Typography variant="h6">Projects</Typography>
               </ButtonBase>
             </Link>
           </div>
           <div className={classes.navCard}>
-            <Link to="/home/">
+            <Link to="/contact/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
                 <img src={logo} alt="Logo" className={classes.imageSrc}/>
-                <Typography>Home</Typography>
+                <Typography variant="h6">Contact</Typography>
+              </ButtonBase>
+            </Link>
+          </div>
+          <div className={classes.navCard}>
+            <Link to="/resume/" className={classes.text}>
+              <ButtonBase focusRipple className={classes.image}>
+                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <Typography variant="h6">Resume</Typography>
               </ButtonBase>
             </Link>
           </div>

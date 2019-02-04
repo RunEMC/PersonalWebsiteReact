@@ -32,6 +32,7 @@ function About(props) {
       <Typography variant="h4" gutterBottom className={classes.header}>About Me</Typography>
       <div className={classes.contentContainer}>
         <Grid container spacing={24} direction="column">
+        
           <Grid item xs>
             <Grid container spacing={24}>
               <Grid item xs={3} className={classes.gridItem}>
@@ -44,11 +45,13 @@ function About(props) {
               </Grid>
             </Grid>
           </Grid>
+
           <Grid item xs>
             <Typography className={classes.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
           </Grid>
+
           <Grid item xs>
             <Grid container spacing={24}>
               <Grid item xs>
@@ -61,6 +64,7 @@ function About(props) {
               </Grid>
             </Grid>
           </Grid>
+
           <Grid item xs>
             <Typography className={classes.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

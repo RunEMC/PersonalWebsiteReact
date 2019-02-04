@@ -5,15 +5,19 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
 const styles = theme => ({
   mainContainer: {
-    backgroundColor: '#eaf6f7',
-    minHeight: '100vh'
+    backgroundColor: '#85C7F2',
+    minHeight: '100vh',
+    height: '100%'
   },
   main: {
     zIndex: -1,
-    backgroundColor: 'white',
+    backgroundColor: '#F1F1F1',
     margin: '20px 12% 20px 12%',
     height: '100%',
     padding: '2% 10% 6% 10%',
@@ -31,6 +35,9 @@ const App = ({ classes }) => (
           <Route exact path="/" component={Home} />
           <Route path="/about/" component={About} />
           <Route path="/home/" component={Home} />
+          <Route path="/projects/" component={Projects} />
+          <Route path="/contact/" component={Contact} />
+          <Route path="/resume/" component={Resume} />
         </main>
       </Fragment>
     </div>
