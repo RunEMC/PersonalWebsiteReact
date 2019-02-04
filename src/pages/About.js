@@ -15,8 +15,12 @@ const styles = theme => ({
   },
   image: {
     margin: 'auto',
-    height: '100px',
-    width: '100px'
+    height: '150px',
+    width: '150px'
+  },
+  text: {
+    fontSize: '18px',
+    paddingTop: '12px'
   }
 })
 
@@ -25,21 +29,44 @@ function About(props) {
 
   return (
     <div>
-      <Typography variant="h3" gutterBottom className={classes.header}>About Me</Typography>
+      <Typography variant="h4" gutterBottom className={classes.header}>About Me</Typography>
       <div className={classes.contentContainer}>
-        <Grid container spacing={24}>
-          <Grid item xs={3} className={classes.gridItem}>
-            <img className={classes.image} src="http://ronli.comli.com/Head_Circle.png"/>
+        <Grid container spacing={24} direction="column">
+          <Grid item xs>
+            <Grid container spacing={24}>
+              <Grid item xs={3} className={classes.gridItem}>
+                <img alt="face" className={classes.image} src="http://ronli.comli.com/Head_Circle.png"/>
+              </Grid>
+              <Grid item xs>
+                <Typography variant="body1" className={classes.text}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs>
-            <Typography>
+            <Typography className={classes.text}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Typography>
+          </Grid>
+          <Grid item xs>
+            <Grid container spacing={24}>
+              <Grid item xs>
+                <Typography variant="body1" className={classes.text}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </Typography>
+              </Grid>
+              <Grid item xs={3} className={classes.gridItem}>
+                <img alt="face2" className={classes.image} src="http://ronli.comli.com/Head_Circle.png"/>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs>
+            <Typography className={classes.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
           </Grid>
         </Grid>
-        <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
       </div>
     </div>
   );
