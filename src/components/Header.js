@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Toolbar, ButtonBase, Typography, Fab, withStyles } from '@material-ui/core';
-import logo from './icons/about.svg';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+
+import home from './icons/home.svg';
+import about from './icons/about.svg';
+import projects from './icons/projects.svg';
+import contact from './icons/contact.svg';
+import resume from './icons/resume.svg';
 
 // https://coolors.co/f5f5f5-266dd3-85c7f2-636363-4c4c4c
 
@@ -62,7 +67,7 @@ function AppHeader(props) {
           <div className={classes.navCard}>
             <Link to="/home/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
-                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <img src={home} alt="Home" className={classes.imageSrc}/>
                 <Typography variant="h6">Home</Typography>
               </ButtonBase>
             </Link>
@@ -70,7 +75,7 @@ function AppHeader(props) {
           <div className={classes.navCard}>
             <Link to="/about/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
-                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <img src={about} alt="About" className={classes.imageSrc}/>
                 <Typography variant="h6">About</Typography>
               </ButtonBase>
             </Link>
@@ -78,7 +83,7 @@ function AppHeader(props) {
           <div className={classes.navCard}>
             <Link to="/projects/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
-                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <img src={projects} alt="Projects" className={classes.imageSrc}/>
                 <Typography variant="h6">Projects</Typography>
               </ButtonBase>
             </Link>
@@ -86,7 +91,7 @@ function AppHeader(props) {
           <div className={classes.navCard}>
             <Link to="/contact/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
-                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <img src={contact} alt="Contact" className={classes.imageSrc}/>
                 <Typography variant="h6">Contact</Typography>
               </ButtonBase>
             </Link>
@@ -94,7 +99,7 @@ function AppHeader(props) {
           <div className={classes.navCard}>
             <Link to="/resume/" className={classes.text}>
               <ButtonBase focusRipple className={classes.image}>
-                <img src={logo} alt="Logo" className={classes.imageSrc}/>
+                <img src={resume} alt="Resume" className={classes.imageSrc}/>
                 <Typography variant="h6">Resume</Typography>
               </ButtonBase>
             </Link>
