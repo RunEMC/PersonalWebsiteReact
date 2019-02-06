@@ -1,26 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography, withStyles } from '@material-ui/core';
+import { Grid, Typography, withStyles, Paper } from '@material-ui/core';
+import { Document, Page } from 'react-pdf';
 
+import ResumePDF from './resume.pdf'
 
 const styles = theme => ({
   header: {
     padding: '30px 10px 20px 10px'
   },
-  contentContainer: {
-    display: 'inline-block'
-  },
-  gridItem: {
-    textAlign: 'center'
-  },
-  image: {
-    margin: 'auto',
-    height: '150px',
-    width: '150px'
-  },
-  text: {
-    fontSize: '18px',
-    paddingTop: '12px'
+  documentContainer: {
+    paddingTop: '25px',
+    paddingLeft: '73.844px'
   }
 })
 
@@ -30,6 +21,13 @@ function Resume(props) {
   return (
     <div>
       <Typography variant="h4" gutterBottom className={classes.header}>Resume</Typography>
+      <Paper container>
+        <div className={classes.documentContainer}>
+          <Document file={ResumePDF}>
+            <Page pageNumber={1} scale={1.5}/>
+          </Document>
+        </div>
+      </Paper>
     </div>
   );
 } 
