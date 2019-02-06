@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import BackgroundAnimations from './components/BackgroundControl'
 
 const styles = theme => ({
   mainContainer: {
@@ -39,6 +40,7 @@ const App = ({ classes }) => (
           <Route path="/contact/" component={Contact} />
           <Route path="/resume/" component={Resume} />
         </main>
+        <BackgroundAnimations />
       </Fragment>
     </div>
   </Router>
