@@ -16,10 +16,12 @@ const styles = theme => ({
     minHeight: '100vh',
     height: '100%'
   },
+  outerContainer: {
+    padding: '40px 12% 40px 12%',
+  },
   main: {
-    zIndex: -1,
+    position: 'relative',
     backgroundColor: '#F1F1F1',
-    margin: '40px 12% 40px 12%',
     height: '100%',
     padding: '2% 10% 6% 10%',
     boxShadow: '0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12)'
@@ -32,15 +34,17 @@ const App = ({ classes }) => (
       <Fragment>
         <CssBaseline />
         <Header />
-        <main className={classes.main}>
-          <Route exact path="/" component={Home} />
-          <Route path="/about/" component={About} />
-          <Route path="/home/" component={Home} />
-          <Route path="/projects/" component={Projects} />
-          <Route path="/contact/" component={Contact} />
-          <Route path="/resume/" component={Resume} />
-        </main>
-        <BackgroundAnimations />
+        <div className={classes.outerContainer}>
+          <BackgroundAnimations />
+          <main className={classes.main}>
+            <Route exact path="/" component={Home} />
+            <Route path="/about/" component={About} />
+            <Route path="/home/" component={Home} />
+            <Route path="/projects/" component={Projects} />
+            <Route path="/contact/" component={Contact} />
+            <Route path="/resume/" component={Resume} />
+          </main>
+        </div>
       </Fragment>
     </div>
   </Router>
