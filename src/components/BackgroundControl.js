@@ -22,7 +22,7 @@ class BackgroundControl extends React.Component {
     super(props);
     this.state = {
       windowHeight: 0,
-      cloud1Pos: -10
+      cloud1Pos: -15
     }
   }
 
