@@ -50,7 +50,7 @@ function About(props) {
 
           <Grid item xs>
             <Typography className={classes.text}>
-              On my free time I enjoy watching movies/TV shows, playing video games and my guitar. I also own a sizable collection of tabletop games that is ever expanding including classics such as Pandemic, Catan and Avalon. Occasionally, I would attend hackations if possible in order to keep my development skills up to date and to try and complete a project that is on my backlog of ideas.
+              On my free time I enjoy watching movies/TV shows, playing video games and practicing my guitar. I also own a sizable collection of tabletop games that is ever expanding (though I sometimes wish that's not the case) some of which are: Istanbul, Captain Sonar, Avalon and Decrypto. Occasionally, I would attend hackations in order to sharpen my development skills, build something cool and hopefully learn something new.
             </Typography>
           </Grid>
 
