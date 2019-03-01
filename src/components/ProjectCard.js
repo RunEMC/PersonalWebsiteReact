@@ -6,14 +6,21 @@ const styles = theme => ({
   card: {
     display: 'flex'
   },
+  cardAction: {
+    width: '218px'
+  },
   media: {
     objectFit: 'cover',
-    height: '218px'
+    height: '218px',
+    width: '218px'
   },
   button: {
     backgroundColor: '#DFDFDF',
     color: '#636363'
-  }
+  },
+  // details: {
+  //   backgroundColor: '#f8f8f8'
+  // }
 })
 
 function ProjectCard(props) {
@@ -21,7 +28,7 @@ function ProjectCard(props) {
 
   return (
     <Card className={classes.card}>
-        <CardActionArea>
+        <CardActionArea className={classes.cardAction}>
             <CardMedia 
                 className={classes.media}
                 image={props.imgSrc}
@@ -31,11 +38,11 @@ function ProjectCard(props) {
 
         <div className={classes.details}>
             <CardContent className={classes.content}>
-                <Typography variant="h6">Project Title</Typography>
-                <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
+                <Typography variant="h6">{props.title}</Typography>
+                <Typography variant="body1">{props.description}</Typography>
                 <CardActions>
                     <Button variant="contained" size="small" className={classes.button}>
-                        Demo
+                        Check it out
                     </Button>
                 </CardActions>
             </CardContent>

@@ -5,13 +5,14 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 
 import './clouds.css';
+import CloudImg from './img/cloud.png'
 
 // Move this to separate file
 const configs = {
   cloudVerticalVariability: 5,
   cloudSizeVariability: 5,
   cloudSpeedVariability: 10000,
-  cloudVerticalStart: 20,
+  cloudVerticalStart: 25,
   cloudAvgSize: 10,
   cloudAvgSpeed: 40000,   // As miliseconds in time taken to complete animation
   cloudStartDelayMax: 10000,
@@ -48,8 +49,7 @@ class BackgroundControl extends React.Component {
   }
 
   async createClouds() {
-    var pageSizeAvailable = 100 - configs.cloudVerticalStart - configs.cloudVerticalVariability;
-    var top = this.getRandBetween(configs.cloudVerticalStart, pageSizeAvailable);
+    var top = this.getRandBetween(configs.cloudVerticalStart, 90);
     var size = configs.cloudAvgSize + this.getRandBetween(0, configs.cloudSizeVariability * 2) - configs.cloudSizeVariability;
     var speed = configs.cloudAvgSpeed + this.getRandBetween(0, configs.cloudSpeedVariability * 2) - configs.cloudSpeedVariability;
     var delay = this.getRandBetween(configs.cloudStartDelayMin, configs.cloudStartDelayMax);
@@ -117,7 +117,7 @@ class BackgroundControl extends React.Component {
               classNames="clouds"
               exit={false}
             >
-              <img style={{top: top, height: size, transitionDuration: time}} src="http://ronli.comli.com/Icons/cloud.png"/>
+              <img style={{top: top, height: size, transitionDuration: time}} src={CloudImg}/>
             </CSSTransition>
           ))}
         </TransitionGroup>

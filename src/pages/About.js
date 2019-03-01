@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
+import Face from './Head_Circle.png';
 
 const styles = theme => ({
   header: {
@@ -11,7 +12,8 @@ const styles = theme => ({
     display: 'inline-block'
   },
   gridItem: {
-    textAlign: 'center'
+    textAlign: 'center',
+    margin: 'auto'
   },
   image: {
     margin: 'auto',
@@ -20,9 +22,20 @@ const styles = theme => ({
   },
   text: {
     fontSize: '18px',
-    paddingTop: '12px'
+    paddingTop: '12px',
+    lineHeight: '175%'
   }
 })
+
+const professionalDesc = "My name is Ron Li, I am a fourth year Double Degree student studying " +
+"Computer Science at the University of Waterloo and Business Administration at Wilfrid Laurier University. " +
+"I am currently on a co-op work term as a software developer at JSI Telecom, while in the past I've worked at " +
+"Manulife and Polaris Transportation Group. As a software developer, I am most experienced in the following: " +
+"C, C++, C#, Python, React/Angular/Node, Java/Android. You can find out more by taking a look at my resume or reaching out to me.";
+
+const hobbyDesc = "On my free time I enjoy watching movies/TV shows, playing video games and practicing my guitar. " +
+"I also own a sizable collection of tabletop games that is ever expanding (though I sometimes wish that's not the case). " +
+"Occasionally, I would attend hackations in order to sharpen my development skills, build something cool and learn something new.";
 
 function About(props) {
   const { classes } = props;
@@ -36,13 +49,11 @@ function About(props) {
           <Grid item xs>
             <Grid container spacing={24}>
               <Grid item xs={3} className={classes.gridItem}>
-                <img alt="face" className={classes.image} src="http://ronli.comli.com/Head_Circle.png"/>
+                <img alt="face" className={classes.image} src={Face}/>
               </Grid>
               <Grid item xs>
                 <Typography variant="body1" className={classes.text}>
-                  My name is Ron Li, I am a fourth year Double Degree student studying Computer Science at the University of Waterloo and Business Administration at Wilfrid Laurier University. I am currently on a co-op work term as a software developer at JSI Telecom while in the past I've worked at Manulife and Polaris Transportation Group. As a software developer, I am experienced in the following: 
-                  {/* Format this into a table with Language/Framework/Tools at the top and familiarity as the row headers */}
-                  C, C++, C#, Python, React, Angular, Node JS, Git, Bash, VIM, Visual Studio, Latex...
+                  {professionalDesc}
                 </Typography>
               </Grid>
             </Grid>
@@ -50,28 +61,12 @@ function About(props) {
 
           <Grid item xs>
             <Typography className={classes.text}>
-              On my free time I enjoy watching movies/TV shows, playing video games and practicing my guitar. I also own a sizable collection of tabletop games that is ever expanding (though I sometimes wish that's not the case) some of which are: Istanbul, Captain Sonar, Avalon and Decrypto. Occasionally, I would attend hackations in order to sharpen my development skills, build something cool and hopefully learn something new.
+              {hobbyDesc}
             </Typography>
           </Grid>
 
-          <Grid item xs>
-            <Grid container spacing={24}>
-              <Grid item xs>
-                <Typography variant="body1" className={classes.text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </Typography>
-              </Grid>
-              <Grid item xs={3} className={classes.gridItem}>
-                <img alt="face2" className={classes.image} src="http://ronli.comli.com/Head_Circle.png"/>
-              </Grid>
-            </Grid>
-          </Grid>
+          {/* Make a table for boardgames, movies and tv list */}
 
-          <Grid item xs>
-            <Typography className={classes.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-          </Grid>
         </Grid>
       </div>
     </div>

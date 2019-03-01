@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
 import ProjectCard from '../components/ProjectCard';
+import SearchAndProtectLogo from './img/searchandprotect.png'
 
 const styles = theme => ({
   header: {
@@ -21,9 +22,17 @@ const styles = theme => ({
   },
   text: {
     fontSize: '18px',
-    padding: '12px'
+    padding: '12px',
+    lineHeight: '175%'
   }
 })
+
+const projDescr = "Here you can find some of the projects I've worked on in the past as well as most of my projects from hackathons. " +
+"Many of them are also available on Github and you can take a look on there or fork a copy to try as well. " +
+"If you have any suggestions or comments for any of my projects, feel free to contribute with a pull request on Github or send me a PM."
+
+// Search and protect
+const searchAndProtectDesc = "A Twitter bot that searches through public timelines of people and discover those that are at risk of self harm or depression using personality profiling and sentiment analysis."
 
 function Projects(props) {
   const { classes } = props;
@@ -36,12 +45,12 @@ function Projects(props) {
         
           <Grid item xs className={classes.gridItem}>
             <Typography variant="body1" className={classes.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              {projDescr}
             </Typography>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" />
+            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" description={searchAndProtectDesc} />
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
