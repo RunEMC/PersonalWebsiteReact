@@ -23,6 +23,10 @@ const styles = theme => ({
   cardBody: {
     lineHeight: '160%'
   },
+  cardDate: {
+    fontStyle: 'italic',
+    paddingBottom: '3px'
+  },
   button: {
     backgroundColor: '#DFDFDF',
     color: '#636363'
@@ -48,6 +52,8 @@ const styles = theme => ({
   // }
 })
 
+const separator = " - ";
+
 function doNothing() {}
 
 function ProjectCard(props) {
@@ -66,6 +72,7 @@ function ProjectCard(props) {
         <div className={classes.details}>
             <CardContent className={classes.content}>
                 <Typography variant="h6">{props.title}</Typography>
+                <Typography variant="subtitle1" className={classes.cardDate}>{props.location}{separator}{props.date}</Typography>
                 <Typography variant="body1" className={classes.cardBody}>{props.description}</Typography>
                 {/* <CardActions className={classes.cardActionArea}>
                     <Button variant="contained" size="small" className={classes.button}>
@@ -76,6 +83,7 @@ function ProjectCard(props) {
                 <div className={classes.chipsContainer}>
                   {props.using.map(tool => (
                     <Chip
+                      key={tool}
                       label={tool}
                       onClick={doNothing}
                       className={classes.chip}

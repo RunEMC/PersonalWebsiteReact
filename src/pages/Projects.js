@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles } from '@material-ui/core';
 
 import ProjectCard from '../components/ProjectCard';
-import SearchAndProtectLogo from './img/searchandprotect.png'
+import SearchAndProtectLogo from './img/searchandprotect.png';
+import BridgeEDLogo from './img/bridgeed.png';
+import HTNSimLogo from './img/htnsim.png';
 
 const styles = theme => ({
   header: {
@@ -27,13 +29,24 @@ const styles = theme => ({
   }
 })
 
+// TODO:
+// Move these to jsons or a database
+
 const projDescr = "Here you can find some of the projects I've worked on in the past as well as most of my projects from hackathons. " +
 "Many of them are also available on Github and you can take a look on there or fork a copy to try as well. " +
 "If you have any suggestions or comments for any of my projects, feel free to contribute with a pull request on Github or send me a PM."
 
 // Search and protect
-const searchAndProtectDesc = "A Twitter bot that searches through public timelines of people and discover those that are at risk of self harm or depression using personality profiling and sentiment analysis."
-const toolsUsed = ["React", "STDLib", "Node JS", "IBM Watson", "CSS", "HTML", "Javascript"];
+const searchAndProtectDesc = "A Twitter bot that searches through public timelines of people and discover those that are at risk of self harm or depression using personality profiling and sentiment analysis.";
+const searchAndProtectTools = ["React", "STDLib", "Node JS", "IBM Watson", "CSS", "HTML", "Javascript"];
+
+// BridgeED
+const bridgeEDDesc = "A fast, practical, and educational translations app that allow immigrants and foreign visitors to easily understand the environment around them with a few simple taps on their phone.";
+const bridgeEDTools = ["React Native", "Node JS", "Unity", "IBM Watson", "Expo IO"];
+
+// Hack the north simulator
+const htnSimDesc = "A fun 2D RPG where the player acts a hackathon participant at Hack the North 2018 and can participate in activities such as working on their hackathon project, sleeping, eating, and talking to sponsors for cool swag.";
+const htnSimTools = ["C++", "Ubisoft Nest API", "SFML"];
 
 function Projects(props) {
   const { classes } = props;
@@ -51,15 +64,15 @@ function Projects(props) {
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" description={searchAndProtectDesc} using={toolsUsed} />
+            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" date="February 8, 2018" location="QHacks 2018" description={searchAndProtectDesc} using={searchAndProtectTools} />
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" using={[]}/>
+            <ProjectCard imgSrc={BridgeEDLogo} title="BridgeED" date="November 19, 2017" location="Hack Western 4" description={bridgeEDDesc} using={bridgeEDTools} />
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" using={[]}/>
+            <ProjectCard imgSrc={HTNSimLogo} title="Hack The North Simulator" date="September 16, 2018" location="Hack The North 2018" description={htnSimDesc} using={htnSimTools} />
           </Grid>
 
         </Grid>
