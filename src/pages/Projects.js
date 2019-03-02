@@ -33,6 +33,7 @@ const projDescr = "Here you can find some of the projects I've worked on in the 
 
 // Search and protect
 const searchAndProtectDesc = "A Twitter bot that searches through public timelines of people and discover those that are at risk of self harm or depression using personality profiling and sentiment analysis."
+const toolsUsed = ["React", "STDLib", "Node JS", "IBM Watson", "CSS", "HTML", "Javascript"];
 
 function Projects(props) {
   const { classes } = props;
@@ -50,15 +51,15 @@ function Projects(props) {
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" description={searchAndProtectDesc} />
+            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" description={searchAndProtectDesc} using={toolsUsed} />
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" />
+            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" using={[]}/>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" />
+            <ProjectCard imgSrc="https://avatars2.githubusercontent.com/u/14964098?s=460&v=4" using={[]}/>
           </Grid>
 
         </Grid>

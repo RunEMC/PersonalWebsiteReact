@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea } from '@material-ui/core';
+import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea, Chip } from '@material-ui/core';
+
+import OpenIcon from '@material-ui/icons/OpenInNew';
 
 const styles = theme => ({
   card: {
@@ -9,19 +11,43 @@ const styles = theme => ({
   cardAction: {
     width: '218px'
   },
+  details: {
+    position: 'relative'
+  },
   media: {
     objectFit: 'cover',
     height: '218px',
     width: '218px'
   },
+  cardBody: {
+    lineHeight: '160%'
+  },
   button: {
     backgroundColor: '#DFDFDF',
     color: '#636363'
   },
+  buttonIcon: {
+    paddingLeft: '5px'
+  },
+  cardActionArea: {
+    paddingTop: '15px',
+    paddingLeft: '0px'
+  },
+  chip: {
+    margin: '3px 5px',
+    fontSize: '12px'
+  },
+  chipsContainer: {
+    position: 'absolute',
+    bottom: '10px',
+    marginLeft: '-5px'
+  }
   // details: {
   //   backgroundColor: '#f8f8f8'
   // }
 })
+
+function doNothing() {}
 
 function ProjectCard(props) {
   const { classes } = props;
@@ -39,12 +65,22 @@ function ProjectCard(props) {
         <div className={classes.details}>
             <CardContent className={classes.content}>
                 <Typography variant="h6">{props.title}</Typography>
-                <Typography variant="body1">{props.description}</Typography>
-                <CardActions>
+                <Typography variant="body1" className={classes.cardBody}>{props.description}</Typography>
+                {/* <CardActions className={classes.cardActionArea}>
                     <Button variant="contained" size="small" className={classes.button}>
                         Check it out
+                        <OpenIcon className={classes.buttonIcon}/>
                     </Button>
-                </CardActions>
+                </CardActions> */}
+                <div className={classes.chipsContainer}>
+                  {props.using.map(tool => (
+                    <Chip
+                      label={tool}
+                      onClick={doNothing}
+                      className={classes.chip}
+                    />
+                  ))}
+                </div>
             </CardContent>
         </div>
     </Card>
