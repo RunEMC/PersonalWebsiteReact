@@ -39,7 +39,13 @@ class BackgroundControl extends React.Component {
 
   componentDidMount() {
     // this.updateWindowDimensions();
+    // Wait for a bit before sending the first cloud
+    // setTimeout(
+    //   () => {
     this.createClouds();
+    //   },
+    //   2000
+    // )
     // this.createNewCloudLoop(20, 10, 20000);
     window.addEventListener('resize', this.updateWindowDimensions);
   }
@@ -55,9 +61,9 @@ class BackgroundControl extends React.Component {
     var delay = this.getRandBetween(configs.cloudStartDelayMin, configs.cloudStartDelayMax);
     // Create cloud
     this.createNewCloudLoop(top, size, speed, delay);
-    console.log("Top: " + top + " Size: " + size + " Speed: " + speed + " Delay: " + delay);
+    // console.log("Top: " + top + " Size: " + size + " Speed: " + speed + " Delay: " + delay);
 
-    // Wait for a bit before sending the next one
+    // Wait for a bit before creating a cloud
     setTimeout(
       () => {
         this.createClouds();

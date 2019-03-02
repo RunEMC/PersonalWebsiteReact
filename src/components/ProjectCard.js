@@ -9,7 +9,8 @@ const styles = theme => ({
     display: 'flex'
   },
   cardAction: {
-    width: '218px'
+    width: '218px',
+    backgroundColor: '#f8f8f8'
   },
   details: {
     position: 'relative'
