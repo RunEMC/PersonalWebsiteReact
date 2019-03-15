@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea, Chip } from '@material-ui/core';
+import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea, Chip, Tab } from '@material-ui/core';
 
 import OpenIcon from '@material-ui/icons/OpenInNew';
 
@@ -53,7 +53,10 @@ const styles = theme => ({
 
 const separator = " - ";
 
-function doNothing() {}
+function openDemo(url) {
+  var newWindow = window.open(url);
+  newWindow.location = url;
+}
 
 function ProjectCard(props) {
   const { classes } = props;
@@ -65,6 +68,7 @@ function ProjectCard(props) {
                 className={classes.media}
                 image={props.imgSrc}
                 title={props.title}
+                onClick={() => {openDemo(props.url)}}
             />
         </CardActionArea>
 
@@ -84,7 +88,7 @@ function ProjectCard(props) {
                     <Chip
                       key={tool}
                       label={tool}
-                      onClick={doNothing}
+                      onClick={() => {}}
                       className={classes.chip}
                     />
                   ))}
