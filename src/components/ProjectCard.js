@@ -13,7 +13,9 @@ const styles = theme => ({
     backgroundColor: '#f8f8f8'
   },
   details: {
-    position: 'relative'
+    position: 'relative',
+    padding: '0px 30px',
+    borderLeft: '1px solid #d1d1d1'
   },
   media: {
     objectFit: 'cover',
@@ -47,9 +49,6 @@ const styles = theme => ({
     bottom: '10px',
     marginLeft: '-5px'
   }
-  // details: {
-  //   backgroundColor: '#f8f8f8'
-  // }
 })
 
 const separator = " - ";
