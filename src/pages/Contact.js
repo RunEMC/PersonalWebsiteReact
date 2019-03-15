@@ -7,7 +7,10 @@ import SendIcon from '@material-ui/icons/Send';
 
 const styles = theme => ({
   header: {
-    padding: '30px 10px 20px 10px'
+    padding: '30px 10px 10px 10px'
+  },
+  dirMsgHeader: {
+    paddingLeft: '0'
   },
   avatar: {
     margin: '10px',
@@ -71,15 +74,14 @@ class Contact extends React.Component {
                 <Grid item xs className={classes.gridItem}>
                   <Typography variant="h6" gutterBottom className={classes.header}>Contact Info</Typography>
                   <Grid container alignItems="center">
-                    <Avatar className={classes.avatar}><MailIcon/></Avatar>
-                    <Typography variant="subtitle1">ronli@comli.com</Typography>
-                  </Grid>
-                </Grid>
-                
-                <Grid item xs className={classes.gridItem}>
-                  <Grid container alignItems="center">
-                    <Avatar className={classes.avatar}><PhoneIcon/></Avatar>
-                    <Typography variant="subtitle1">(123)-456-7890</Typography>
+                    <Grid container alignItems="center">
+                      <Avatar className={classes.avatar}><MailIcon/></Avatar>
+                      <Typography variant="subtitle1">ronli@comli.com</Typography>
+                    </Grid>
+                    <Grid container alignItems="center">
+                      <Avatar className={classes.avatar}><PhoneIcon/></Avatar>
+                      <Typography variant="subtitle1">(123)-456-7890</Typography>
+                    </Grid>
                   </Grid>
                 </Grid>
 
@@ -112,8 +114,8 @@ class Contact extends React.Component {
             </Grid>
 
             <Grid item xs className={classes.gridItem}>
+              <Typography variant="h6" gutterBottom className={classes.dirMsgHeader}>Message Me Directly</Typography>
               <form>
-                <Typography variant="h6" gutterBottom className={classes.header}>Message Me Directly</Typography>
                 <TextField
                   id="Name"
                   label="Enter Your Name"
