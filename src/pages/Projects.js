@@ -64,15 +64,15 @@ function Projects(props) {
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" date="February 8, 2018" location="QHacks 2018" description={searchAndProtectDesc} using={searchAndProtectTools} url="https://github.com/RunEMC/SearchAndPro.tech"/>
+            <ProjectCard imgSrc={SearchAndProtectLogo} title="Search And Protect" date="February 8, 2018" location="QHacks 2018" description={searchAndProtectDesc} tools={searchAndProtectTools} url="https://github.com/RunEMC/SearchAndPro.tech"/>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={BridgeEDLogo} title="BridgeED" date="November 19, 2017" location="Hack Western 4" description={bridgeEDDesc} using={bridgeEDTools} url="https://github.com/christinazhang/bridgED" />
+            <ProjectCard imgSrc={BridgeEDLogo} title="BridgeED" date="November 19, 2017" location="Hack Western 4" description={bridgeEDDesc} tools={bridgeEDTools} url="https://github.com/christinazhang/bridgED" />
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Hack The North Simulator" date="September 16, 2018" location="Hack The North 2018" description={htnSimDesc} using={htnSimTools} url="https://github.com/hygzhu/hack-the-north-2018"/>
+            <ProjectCard imgSrc={HTNSimLogo} title="Hack The North Simulator" date="September 16, 2018" location="Hack The North 2018" description={htnSimDesc} tools={htnSimTools} url="https://github.com/hygzhu/hack-the-north-2018"/>
           </Grid>
 
         </Grid>

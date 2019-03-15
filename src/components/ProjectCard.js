@@ -58,6 +58,7 @@ function openDemo(url) {
   newWindow.location = url;
 }
 
+// Requires as props: imgSrc, title, date, location, description, tools, url
 function ProjectCard(props) {
   const { classes } = props;
 
@@ -84,7 +85,7 @@ function ProjectCard(props) {
                     </Button>
                 </CardActions> */}
                 <div className={classes.chipsContainer}>
-                  {props.using.map(tool => (
+                  {props.tools.map(tool => (
                     <Chip
                       key={tool}
                       label={tool}
