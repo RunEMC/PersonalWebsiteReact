@@ -55,7 +55,7 @@ class BackgroundControl extends React.Component {
   }
 
   async createClouds() {
-    var top = this.getRandBetween(configs.cloudVerticalStart, 90);
+    var top = this.getRandBetween(configs.cloudVerticalStart, 80);
     var size = configs.cloudAvgSize + this.getRandBetween(0, configs.cloudSizeVariability * 2) - configs.cloudSizeVariability;
     var speed = configs.cloudAvgSpeed + this.getRandBetween(0, configs.cloudSpeedVariability * 2) - configs.cloudSpeedVariability;
     var delay = this.getRandBetween(configs.cloudStartDelayMin, configs.cloudStartDelayMax);
