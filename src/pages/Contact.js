@@ -54,8 +54,19 @@ const styles = theme => ({
   }
 })
 
+const notImplementedText = "Sorry, I haven't gotten around to implementing this yet ¯\\_(ツ)_/¯";
+const NotImplementedMsg = () => {
+  return <Typography style={{padding: '5px 0px', color: 'red'}}>{notImplementedText}</Typography>
+}
+
+function openLink(url) {
+  var newWindow = window.open(url);
+  newWindow.location = url;
+}
+
 class Contact extends React.Component {
   state = {
+    hideMsg: true
   }
   
   handleChange = name => event => {
@@ -95,17 +106,17 @@ class Contact extends React.Component {
                   <Typography variant="h6">Networking Platforms</Typography>
                   <Grid container alignItems="center">
                     <Tooltip title="Github" aria-label="Github">
-                      <Fab className={classes.fab}>
+                      <Fab className={classes.fab} onClick={() => {openLink("https://github.com/RunEMC")}}>
                         <img className={classes.avatarLinks} alt="Github" src={GithubIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="LinkedIn" aria-label="LinkedIn">
-                      <Fab className={classes.fab}>
+                      <Fab className={classes.fab} onClick={() => {openLink("https://www.linkedin.com/in/ronli1/")}}>
                         <img className={classes.avatarLinks} alt="LinkedIn" src={LinkedinIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Devpost" aria-label="Devpost">
-                      <Fab className={classes.fab}>
+                      <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
                         <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
                       </Fab>
                     </Tooltip>
@@ -148,7 +159,8 @@ class Contact extends React.Component {
                   margin="normal"
                   variant="outlined"
                 />
-                <Button variant="contained" className={classes.sendButton}>
+                {!this.state.hideMsg && <NotImplementedMsg/>}
+                <Button variant="contained" className={classes.sendButton} onClick={() => {this.setState({hideMsg: false})}}>
                   Send
                   <SendIcon className={classes.send}></SendIcon>
                 </Button>
