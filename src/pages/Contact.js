@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, withStyles, Toolbar, Avatar, Fab, Tooltip, TextField, Button } from '@material-ui/core';
+
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 import SendIcon from '@material-ui/icons/Send';
+
+import GithubIcon from './img/github.svg';
+import LinkedinIcon from './img/linkedin.png';
+import DevpostIcon from './img/devpost.png';
 
 const styles = theme => ({
   header: {
@@ -72,7 +77,7 @@ class Contact extends React.Component {
               <Grid container spacing={24} direction="column">
 
                 <Grid item xs className={classes.gridItem}>
-                  <Typography variant="h6" gutterBottom className={classes.header}>Contact Info</Typography>
+                  <Typography variant="h6" gutterBottom>Contact Info</Typography>
                   <Grid container alignItems="center">
                     <Grid container alignItems="center">
                       <Avatar className={classes.avatar}><MailIcon/></Avatar>
@@ -91,17 +96,17 @@ class Contact extends React.Component {
                   <Grid container alignItems="center">
                     <Tooltip title="Github" aria-label="Github">
                       <Fab className={classes.fab}>
-                        <img className={classes.avatarLinks} alt="Github" src="https://image.flaticon.com/icons/svg/25/25231.svg"/>
+                        <img className={classes.avatarLinks} alt="Github" src={GithubIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="LinkedIn" aria-label="LinkedIn">
                       <Fab className={classes.fab}>
-                        <img className={classes.avatarLinks} alt="LinkedIn" src="https://image.flaticon.com/icons/svg/25/25231.svg"/>
+                        <img className={classes.avatarLinks} alt="LinkedIn" src={LinkedinIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Devpost" aria-label="Devpost">
                       <Fab className={classes.fab}>
-                        <img className={classes.avatarLinks} alt="Devpost" src="https://image.flaticon.com/icons/svg/25/25231.svg"/>
+                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
                       </Fab>
                     </Tooltip>
                   </Grid>
@@ -115,7 +120,7 @@ class Contact extends React.Component {
 
             <Grid item xs className={classes.gridItem}>
               <Typography variant="h6" gutterBottom className={classes.dirMsgHeader}>Message Me Directly</Typography>
-              <form>
+              <form autoComplete="off" noValidate>
                 <TextField
                   id="Name"
                   label="Enter Your Name"
@@ -127,7 +132,6 @@ class Contact extends React.Component {
                   id="Name"
                   label="Enter Your Email"
                   type="email"
-                  autoComplete="email"
                   placeholder="JohnDoe@email.com"
                   margin="normal"
                   variant="outlined"
