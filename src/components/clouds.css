@@ -1,0 +1,10 @@
+.clouds-enter {
+    left: -10%;
+    /* top: 25%; */
+    position: absolute;
+}
+
+.clouds-enter-active {
+    left: 100%;
+    transition: left linear;
+}
