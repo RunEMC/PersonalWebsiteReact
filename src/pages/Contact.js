@@ -92,11 +92,11 @@ class Contact extends React.Component {
                   <Grid container alignItems="center">
                     <Grid container alignItems="center">
                       <Avatar className={classes.avatar}><MailIcon/></Avatar>
-                      <Typography variant="subtitle1">ronli@comli.com</Typography>
+                      <Typography variant="subtitle1">rl5li@edu.uwaterloo.com</Typography>
                     </Grid>
                     <Grid container alignItems="center">
                       <Avatar className={classes.avatar}><PhoneIcon/></Avatar>
-                      <Typography variant="subtitle1">(123)-456-7890</Typography>
+                      <Typography variant="subtitle1">(519)-591-0551</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
