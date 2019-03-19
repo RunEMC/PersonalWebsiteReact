@@ -48,6 +48,26 @@ const bridgeEDTools = ["React Native", "Node JS", "Unity", "IBM Watson", "Expo I
 const htnSimDesc = "A fun 2D RPG where the player acts a hackathon participant at Hack the North 2018 and can participate in activities such as working on their hackathon project, sleeping, eating, and talking to sponsors for cool swag.";
 const htnSimTools = ["C++", "Ubisoft Nest API", "SFML"];
 
+// Activity Map
+const actMapDesc = "Using data coming from an Arduino equipped with a light, temperature, and noise sensor, we created a tool that allows participants at Hackathons to oversee all available hacking rooms and find ones that would suit their personal hacking needs";
+const actMapTools = ["C", "C++", "React", "Arduino"];
+
+// Giphy guesser
+const giphyGuesserDesc = "Giphy Guesser is a simple phone game using Giphy which involves having a player select a gif relevant to a word or phrase and having other players guess the chosen word or phrase after viewing the given gif image.";
+const giphyGuesserTools = ["React Native", "Expo IO", "Giphy API"];
+
+// Pybot
+const pybotDesc = "A python discord bot that implements additional voice and chat commands to facilitate better social exchanges between participants.";
+const pybotTools = ["Python", "Discord API"];
+
+// Old website
+const oldSiteDesc = "My old personal website used mainly to expand my web dev skills and experiment with SQL/PHP database management.";
+const oldSiteTools = ["HTML", "CSS", "Javascript", "PHP", "MySQL", "Bootstrap"];
+
+// Noot bot
+const discordBotDesc = "My first attempt at making a discord bot, it has audio playback and a text-based RPG game along with a whole bunch of other random features.";
+const discordBotTools = ["Node JS", "FFmpeg", "Discord API"];
+
 function Projects(props) {
   const { classes } = props;
 
@@ -75,6 +95,26 @@ function Projects(props) {
             <ProjectCard imgSrc={HTNSimLogo} title="Hack The North Simulator" date="September 16, 2018" location="Hack The North 2018" description={htnSimDesc} tools={htnSimTools} url="https://github.com/hygzhu/hack-the-north-2018"/>
           </Grid>
 
+          <Grid item xs className={classes.gridItem}>
+            <ProjectCard imgSrc={HTNSimLogo} title="Activity Map" date="November 25, 2018" location="Hack Western 5" description={actMapDesc} tools={actMapTools} url="https://github.com/hygzhu/hackwestern-2018"/>
+          </Grid>
+
+          <Grid item xs className={classes.gridItem}>
+            <ProjectCard imgSrc={HTNSimLogo} title="Giphy Guesser" date="September 10, 2017" location="PennApps XVI" description={giphyGuesserDesc} tools={giphyGuesserTools} url="https://github.com/nicholaspun/giphyguesser"/>
+          </Grid>
+          
+          <Grid item xs className={classes.gridItem}>
+            <ProjectCard imgSrc={HTNSimLogo} title="Pybot" date="April 13, 2017" location="Personal Project" description={pybotDesc} tools={pybotTools} url="https://github.com/RunEMC/PyBot"/>
+          </Grid>
+
+          <Grid item xs className={classes.gridItem}>
+            <ProjectCard imgSrc={HTNSimLogo} title="Old Personal Website" date="April 15, 2017" location="Personal Project" description={oldSiteDesc} tools={oldSiteTools} url="http://ronli.comli.com"/>
+          </Grid>
+
+          <Grid item xs className={classes.gridItem}>
+            <ProjectCard imgSrc={HTNSimLogo} title="Discord Bot" date="April 26, 2018" location="Personal Project" description={discordBotDesc} tools={discordBotTools} url="https://github.com/RunEMC/NootBot"/>
+          </Grid>
+          
         </Grid>
       </div>
     </div>
