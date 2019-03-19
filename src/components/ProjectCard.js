@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea, Chip, Tab } from '@material-ui/core';
+import { Card, Typography, withStyles, CardMedia, CardContent, CardActionArea, Chip } from '@material-ui/core';
 
-import OpenIcon from '@material-ui/icons/OpenInNew';
+// import OpenIcon from '@material-ui/icons/OpenInNew';
 
 const styles = theme => ({
   card: {

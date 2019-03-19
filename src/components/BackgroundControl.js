@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Typography, withStyles, CardMedia, CardContent, CardActions, Button, CardActionArea } from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 
@@ -27,6 +27,8 @@ const styles = theme => ({
 })
 
 class BackgroundControl extends React.Component {
+  _isMounted_ = false;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -38,6 +40,7 @@ class BackgroundControl extends React.Component {
   }
 
   componentDidMount() {
+    this._isMounted_ = true;
     // this.updateWindowDimensions();
     // Wait for a bit before sending the first cloud
     // setTimeout(
@@ -51,6 +54,7 @@ class BackgroundControl extends React.Component {
   }
 
   componentWillUnmount() {
+    this._isMounted_ = false;
     window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
@@ -76,21 +80,25 @@ class BackgroundControl extends React.Component {
     var id = uuid();
 
     // Add new cloud
-    this.setState(state => ({
-      clouds: [
-        ...state.clouds,
-        { id: id, top: pos+'%', size: size+'%', time: (time/1000)+'s' },
-      ],
-    }));
+    if (this._isMounted_) {
+      this.setState(state => ({
+        clouds: [
+          ...state.clouds,
+          { id: id, top: pos+'%', size: size+'%', time: (time/1000)+'s' },
+        ],
+      }));
+    }
 
     // Wait until animation finishes before deleting
     setTimeout(
       () => {
-        this.setState(state => ({
-          clouds: state.clouds.filter(
-            cloud => cloud.id !== id
-          ),
-        }));
+        if (this._isMounted_) {
+          this.setState(state => ({
+            clouds: state.clouds.filter(
+              cloud => cloud.id !== id
+            ),
+          }));
+        }
       }, time + 2500
     )
   }
@@ -123,7 +131,7 @@ class BackgroundControl extends React.Component {
               classNames="clouds"
               exit={false}
             >
-              <img style={{top: top, height: size, transitionDuration: time}} src={CloudImg}/>
+              <img alt="A Smooth Rolling Cloud" style={{top: top, height: size, transitionDuration: time}} src={CloudImg}/>
             </CSSTransition>
           ))}
         </TransitionGroup>

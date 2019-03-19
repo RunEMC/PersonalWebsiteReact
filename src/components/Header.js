@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Toolbar, ButtonBase, Typography, Fab, withStyles } from '@material-ui/core';
+import { AppBar, ButtonBase, Typography, withStyles } from '@material-ui/core';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
 
 import home from './icons/home.svg';
 import about from './icons/about.svg';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography, withStyles, Paper } from '@material-ui/core';
+import { Typography, withStyles, Paper } from '@material-ui/core';
 import { Document, Page } from 'react-pdf';
 
 import ResumePDF from './resume.pdf'
