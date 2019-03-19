@@ -22,14 +22,19 @@ const styles = theme => ({
     backgroundColor: '#636363'
   },
   fab: {
-    margin: '25px'
+    margin: '20px 15px'
   },
   avatarLinks: {
     height: '100%',
     width: '100%'
   },
+  nameField: {
+    // marginRight: '30px'
+  },
   emailField: {
-    float: 'right'
+    [theme.breakpoints.up('1500')]: {
+      float: 'right'
+    }
   },
   networkingDivider: {
     width: '80%',
@@ -120,6 +125,16 @@ class Contact extends React.Component {
                         <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
                       </Fab>
                     </Tooltip>
+                    <Tooltip title="Facebook" aria-label="Facebook">
+                      <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
+                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                      </Fab>
+                    </Tooltip>
+                    <Tooltip title="Steam" aria-label="Steam">
+                      <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
+                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                      </Fab>
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Grid>
@@ -138,6 +153,7 @@ class Contact extends React.Component {
                   placeholder="John Doe"
                   margin="normal"
                   variant="outlined"
+                  className={classes.nameField}
                 />
                 <TextField
                   id="Name"
