@@ -9,6 +9,8 @@ import SendIcon from '@material-ui/icons/Send';
 import GithubIcon from './img/github.svg';
 import LinkedinIcon from './img/linkedin.png';
 import DevpostIcon from './img/devpost.png';
+import FacebookIcon from './img/facebook.png';
+import SteamIcon from './img/steam.png';
 
 const styles = theme => ({
   header: {
@@ -22,14 +24,19 @@ const styles = theme => ({
     backgroundColor: '#636363'
   },
   fab: {
-    margin: '25px'
+    margin: '20px 15px'
   },
   avatarLinks: {
     height: '100%',
     width: '100%'
   },
+  nameField: {
+    // marginRight: '30px'
+  },
   emailField: {
-    float: 'right'
+    [theme.breakpoints.up('1500')]: {
+      float: 'right'
+    }
   },
   networkingDivider: {
     width: '80%',
@@ -92,11 +99,11 @@ class Contact extends React.Component {
                   <Grid container alignItems="center">
                     <Grid container alignItems="center">
                       <Avatar className={classes.avatar}><MailIcon/></Avatar>
-                      <Typography variant="subtitle1">ronli@comli.com</Typography>
+                      <Typography variant="subtitle1">rl5li@edu.uwaterloo.com</Typography>
                     </Grid>
                     <Grid container alignItems="center">
                       <Avatar className={classes.avatar}><PhoneIcon/></Avatar>
-                      <Typography variant="subtitle1">(123)-456-7890</Typography>
+                      <Typography variant="subtitle1">(519)-591-0551</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -107,17 +114,27 @@ class Contact extends React.Component {
                   <Grid container alignItems="center">
                     <Tooltip title="Github" aria-label="Github">
                       <Fab className={classes.fab} onClick={() => {openLink("https://github.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Github" src={GithubIcon}/>
+                        <img className={classes.avatarLinks} alt="Github Link" src={GithubIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="LinkedIn" aria-label="LinkedIn">
                       <Fab className={classes.fab} onClick={() => {openLink("https://www.linkedin.com/in/ronli1/")}}>
-                        <img className={classes.avatarLinks} alt="LinkedIn" src={LinkedinIcon}/>
+                        <img className={classes.avatarLinks} alt="LinkedIn Link" src={LinkedinIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Devpost" aria-label="Devpost">
                       <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                        <img className={classes.avatarLinks} alt="Devpost Link" src={DevpostIcon}/>
+                      </Fab>
+                    </Tooltip>
+                    <Tooltip title="Facebook" aria-label="Facebook">
+                      <Fab className={classes.fab} onClick={() => {openLink("https://www.facebook.com/ron.li.404")}}>
+                        <img className={classes.avatarLinks} alt="Facebook Link" src={FacebookIcon}/>
+                      </Fab>
+                    </Tooltip>
+                    <Tooltip title="Steam" aria-label="Steam">
+                      <Fab className={classes.fab} onClick={() => {openLink("https://steamcommunity.com/id/runemc/")}}>
+                        <img className={classes.avatarLinks} alt="Steam Link" src={SteamIcon}/>
                       </Fab>
                     </Tooltip>
                   </Grid>
@@ -138,6 +155,7 @@ class Contact extends React.Component {
                   placeholder="John Doe"
                   margin="normal"
                   variant="outlined"
+                  className={classes.nameField}
                 />
                 <TextField
                   id="Name"
