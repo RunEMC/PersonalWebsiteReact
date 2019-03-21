@@ -9,6 +9,8 @@ import SendIcon from '@material-ui/icons/Send';
 import GithubIcon from './img/github.svg';
 import LinkedinIcon from './img/linkedin.png';
 import DevpostIcon from './img/devpost.png';
+import FacebookIcon from './img/facebook.png';
+import SteamIcon from './img/steam.png';
 
 const styles = theme => ({
   header: {
@@ -112,27 +114,27 @@ class Contact extends React.Component {
                   <Grid container alignItems="center">
                     <Tooltip title="Github" aria-label="Github">
                       <Fab className={classes.fab} onClick={() => {openLink("https://github.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Github" src={GithubIcon}/>
+                        <img className={classes.avatarLinks} alt="Github Link" src={GithubIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="LinkedIn" aria-label="LinkedIn">
                       <Fab className={classes.fab} onClick={() => {openLink("https://www.linkedin.com/in/ronli1/")}}>
-                        <img className={classes.avatarLinks} alt="LinkedIn" src={LinkedinIcon}/>
+                        <img className={classes.avatarLinks} alt="LinkedIn Link" src={LinkedinIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Devpost" aria-label="Devpost">
                       <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                        <img className={classes.avatarLinks} alt="Devpost Link" src={DevpostIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Facebook" aria-label="Facebook">
-                      <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                      <Fab className={classes.fab} onClick={() => {openLink("https://www.facebook.com/ron.li.404")}}>
+                        <img className={classes.avatarLinks} alt="Facebook Link" src={FacebookIcon}/>
                       </Fab>
                     </Tooltip>
                     <Tooltip title="Steam" aria-label="Steam">
-                      <Fab className={classes.fab} onClick={() => {openLink("https://devpost.com/RunEMC")}}>
-                        <img className={classes.avatarLinks} alt="Devpost" src={DevpostIcon}/>
+                      <Fab className={classes.fab} onClick={() => {openLink("https://steamcommunity.com/id/runemc/")}}>
+                        <img className={classes.avatarLinks} alt="Steam Link" src={SteamIcon}/>
                       </Fab>
                     </Tooltip>
                   </Grid>

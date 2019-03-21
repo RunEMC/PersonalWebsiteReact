@@ -6,6 +6,11 @@ import ProjectCard from '../components/ProjectCard';
 import SearchAndProtectLogo from './img/searchandprotect.png';
 import BridgeEDLogo from './img/bridgeed.png';
 import HTNSimLogo from './img/htnsim.png';
+import ActivityMapLogo from './img/activitymap.png';
+import GiphyGuesserLogo from './img/giphyguesser.png';
+import RobotLogo from './img/robot.png';
+import PersonalWebsiteLogo from './img/web.png';
+import DiscordLogo from './img/discord.png';
 
 const styles = theme => ({
   header: {
@@ -96,23 +101,23 @@ function Projects(props) {
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Activity Map" date="November 25, 2018" location="Hack Western 5" description={actMapDesc} tools={actMapTools} url="https://github.com/hygzhu/hackwestern-2018"/>
+            <ProjectCard imgSrc={ActivityMapLogo} title="Activity Map" date="November 25, 2018" location="Hack Western 5" description={actMapDesc} tools={actMapTools} url="https://github.com/hygzhu/hackwestern-2018"/>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Giphy Guesser" date="September 10, 2017" location="PennApps XVI" description={giphyGuesserDesc} tools={giphyGuesserTools} url="https://github.com/nicholaspun/giphyguesser"/>
+            <ProjectCard imgSrc={GiphyGuesserLogo} title="Giphy Guesser" date="September 10, 2017" location="PennApps XVI" description={giphyGuesserDesc} tools={giphyGuesserTools} url="https://github.com/nicholaspun/giphyguesser"/>
           </Grid>
           
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Pybot" date="April 13, 2017" location="Personal Project" description={pybotDesc} tools={pybotTools} url="https://github.com/RunEMC/PyBot"/>
+            <ProjectCard imgSrc={RobotLogo} title="Pybot" date="April 13, 2017" location="Personal Project" description={pybotDesc} tools={pybotTools} url="https://github.com/RunEMC/PyBot"/>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Old Personal Website" date="April 15, 2017" location="Personal Project" description={oldSiteDesc} tools={oldSiteTools} url="http://ronli.comli.com"/>
+            <ProjectCard imgSrc={PersonalWebsiteLogo} title="Old Personal Website" date="April 15, 2017" location="Personal Project" description={oldSiteDesc} tools={oldSiteTools} url="http://ronli.comli.com"/>
           </Grid>
 
           <Grid item xs className={classes.gridItem}>
-            <ProjectCard imgSrc={HTNSimLogo} title="Discord Bot" date="April 26, 2018" location="Personal Project" description={discordBotDesc} tools={discordBotTools} url="https://github.com/RunEMC/NootBot"/>
+            <ProjectCard imgSrc={DiscordLogo} title="Discord Bot" date="April 26, 2018" location="Personal Project" description={discordBotDesc} tools={discordBotTools} url="https://github.com/RunEMC/NootBot"/>
           </Grid>
           
         </Grid>
